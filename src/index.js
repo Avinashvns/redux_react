@@ -5,25 +5,23 @@ import App from './App';
 
 import { Provider } from 'react-redux';
 
-import { createStore } from 'redux';
-import counterReducer from './redux Services/reducer/Count_reducer';
-import bookData from './redux Services/reducer/Book_reducer';
+//  React redux
+// import { createStore } from 'redux';
+// import counterReducer from './redux Services/reducer/Count_reducer';
+// import bookData from './redux Services/reducer/Book_reducer';
 
-const counterStore = createStore(counterReducer);
-const bookStore = createStore(bookData);
+// const counterStore = createStore(counterReducer);
+// const bookStore = createStore(bookData);
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+// Using React Toolkit
+import store from './reduxtoolkit/Store_toolkit'
 
 ReactDOM.render(
-  <Provider store={counterStore} >
-    <Provider store={bookStore} >
-      <App />
-    </Provider>
+  // <Provider store={counterStore} >
+  <Provider store={store} >
+    {/* <Provider store={bookStore} > */}
+    <App />
+    {/* </Provider> */}
     {/*  */}
   </Provider>,
 
