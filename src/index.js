@@ -4,14 +4,16 @@ import './index.css';
 import App from './App';
 
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import counterReducer from './redux Services/reducer/Count_reducer';
-import bookData from './redux Services/reducer/Book_reducer';
 
-const store = createStore(counterReducer);
-const bookStore = createStore(bookData);
+// import { createStore } from 'redux';
+// import counterReducer from './redux Services/reducer/Count_reducer';
+// import bookData from './redux Services/reducer/Book_reducer';
+
+// const store = createStore(counterReducer);
+// const bookStore = createStore(bookData);
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
+import store from './redux Services/Store'
 // root.render(
 //   <React.StrictMode>
 //     <App />
@@ -20,11 +22,9 @@ const bookStore = createStore(bookData);
 
 ReactDOM.render(
   <Provider store={store} >
-    <Provider store={bookStore}>
-      <App />
-    </Provider>
-
+    <App />
   </Provider>,
+
   document.getElementById('root')
 );
 
