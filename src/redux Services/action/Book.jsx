@@ -10,6 +10,6 @@ export const bookTitle = () => {
 
 export const bookAuthor = () => {
     return {
-        author: myauthor
+        type: myauthor
     }
 }
