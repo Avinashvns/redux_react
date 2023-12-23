@@ -1,15 +1,15 @@
 import { connect } from "react-redux";
 import { bookAuthor, bookTitle } from "../redux Services/action/Book";
 
-const Book = ({ showauthor, showtitle, bookAuthor, bookTitle }) => {
+const Book = ({ myauthor, mytitle, bookAuthor, bookTitle }) => {
     return (
         <div>
             <h3>Book Details</h3>
-            <h5>{showtitle}</h5>
+            <h5>{mytitle}</h5>
             <button onClick={bookTitle}>Title Update</button>
 
             <br />
-            <h5>{showauthor}</h5>
+            <h5>{myauthor}</h5>
             <button onClick={bookAuthor}>Author Update</button>
         </div>
     );
@@ -17,8 +17,8 @@ const Book = ({ showauthor, showtitle, bookAuthor, bookTitle }) => {
 
 const mapStateToProps = (state) => {
     return {
-        title: state.title,
-        author: state.author
+        mytitle: state.mytitle,
+        myauthor: state.myauthor
     }
 }
 const mapDispatchToProps = {

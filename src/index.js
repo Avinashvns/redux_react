@@ -6,8 +6,10 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import counterReducer from './redux Services/reducer/Count_reducer';
+import bookData from './redux Services/reducer/Book_reducer';
 
 const store = createStore(counterReducer);
+const bookStore = createStore(bookData);
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -18,7 +20,10 @@ const store = createStore(counterReducer);
 
 ReactDOM.render(
   <Provider store={store} >
-    <App />
+    <Provider store={bookStore}>
+      <App />
+    </Provider>
+
   </Provider>,
   document.getElementById('root')
 );

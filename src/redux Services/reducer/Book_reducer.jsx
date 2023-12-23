@@ -1,19 +1,21 @@
-import { myauthor, mytitle } from "../action/Book"
+import { TITLE, AUTHOR } from "../action/Book"
 
 const initialState = {
-    title: "Let Us C",
-    author: "Avinash"
+    mytitle: "Let Us C",
+    myauthor: "Avinash"
 }
 
 const bookData = (state = initialState, action) => {
     switch (action.type) {
-        case mytitle:
+        case TITLE:
             return {
-                title: "Java"
+                ...state,
+                mytitle: "Java"
             }
-        case myauthor:
+        case AUTHOR:
             return {
-                author: "Ram Ji"
+                ...state,
+                myauthor: "Ram Ji"
             }
         default:
             return state;
