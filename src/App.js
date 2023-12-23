@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import MyCounter from './count';
+import MyCounter from './redux page/count';
 
 function App() {
   return (

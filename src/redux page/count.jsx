@@ -1,7 +1,7 @@
 
 import { connect } from "react-redux";
 
-import { incrementCounter, decrementCounter } from "./redux Services/action/Count_action";
+import { incrementCounter, decrementCounter } from "../redux Services/action/Count_action";
 
 const MyCounter = ({ count, incrementCounter, decrementCounter }) => {
     return (
